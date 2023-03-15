@@ -1,0 +1,9 @@
+*.log
+node_modules/
+public/
+themes/*
+!themes/next/
+themes/next/*
+!themes/next/_config.yml
+!themes/next/package.json
+!themes/next/package-lock.json
