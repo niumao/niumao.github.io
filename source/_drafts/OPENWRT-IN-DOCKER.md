@@ -2,10 +2,11 @@
 title: OPENWRT IN DOCKER
 tags:
 ---
+failed
 NETWORK:
 ip link set eno1 promisc on
 docker network create -d macvlan --subnet=192.168.1.0/24 --gateway=192.168.1.1 -o parent=eno1 dockervlan
-docker run -itd --privileged=true --name openwrt --ip=192.168.1.111 --network dockervlan openwrtorg/rootfs:x86_64-22.03.3
+docker run -itd --cap-add=NET_ADMIN --name openwrt --ip=192.168.1.111 --network dockervlan openwrtorg/rootfs:x86_64-22.03.3
 
 PREPARE:
 opkg remove dnsmasq 
