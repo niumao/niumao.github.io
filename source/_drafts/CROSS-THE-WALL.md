@@ -6,7 +6,7 @@ SS:
 apt update && apt install shadowsocks-libev
 vim /etc/shadowsocks-libev/config.json
 {
-  "server":"46.29.166.11",
+  "server":"x.x.x.x",
   "server_port":33333,
   "local_address":"127.0.0.1",
   "local_port":1080,
